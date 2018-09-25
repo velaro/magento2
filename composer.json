@@ -6,17 +6,13 @@
   "license": [
     "OSL-3.0"
   ],
-  "repositories": [
-    {
-        "type": "vcs",
-        "url": "https://github.com/velaro/magento2"
-    }
-],
-"require": {
-  "velaro/magento2": "master"
-},
+  "require": {
+    "velaro/magento2": "master"
+  },
   "autoload": {
-    "files": [ "registration.php" ],
+    "files": [
+      "registration.php"
+    ],
     "psr-4": {
       "Velaro\\Chat\\": ""
     }
