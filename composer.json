@@ -12,6 +12,9 @@
         "url": "https://github.com/velaro/magento2"
     }
 ],
+"require": {
+  "velaro/magento2": "master"
+},
   "autoload": {
     "files": [ "registration.php" ],
     "psr-4": {
