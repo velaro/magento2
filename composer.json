@@ -6,9 +6,6 @@
   "license": [
     "OSL-3.0"
   ],
-  "require": {
-    "velaro/magento2": "master"
-  },
   "autoload": {
     "files": [
       "registration.php"
