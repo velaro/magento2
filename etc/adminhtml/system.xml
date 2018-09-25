@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../Magento/Config/etc/system_file.xsd">
+    <system>
+        <tab id="velaro" sortOrder="1">
+            <label>Velaro</label>
+        </tab>
+        <section id="velaro"  showInDefault="1">
+            <tab>velaro</tab>
+            <label>Configure</label>
+            <resource>Magento_Config::config</resource>
+            <group id="site"  showInDefault="1">
+                <label>Velaro Configuration</label>
+                <field id="identifier" type="text" showInDefault="1">
+                    <label>Site ID</label>
+                </field>
+                <field id="group" type="text" showInDefault="1">
+                    <label>Group</label>
+                </field>
+                <field id="apimainurl" type="text" showInDefault="1">
+                    <label>Velaro Api Url</label>
+                </field>
+                <field id="cdnurl" type="text" showInDefault="1">
+                    <label>Velaro Cdn Url</label>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

@@ -1,0 +1,21 @@
+{
+  "name": "velaro/chat",
+  "description": "A module for easily integrating Magento into your Velaro account",
+  "type": "magento2-module",
+  "version": "1.0.0",
+  "license": [
+    "OSL-3.0"
+  ],
+  "repositories": [
+    {
+        "type": "vcs",
+        "url": "https://github.com/velaro/magento2"
+    }
+],
+  "autoload": {
+    "files": [ "registration.php" ],
+    "psr-4": {
+      "Velaro\\Chat\\": ""
+    }
+  }
+}

@@ -1,0 +1,39 @@
+<script>
+  window.VelaroConfig = {
+    mainApi: '<?php echo ($this->helper('Velaro\Chat\helper\data')->getConfig('velaro/site/apimainurl')) ?>',
+    cdn: '<?php echo ($this->helper('Velaro\Chat\helper\data')->getConfig('velaro/site/cdnurl')) ?>/',
+    siteId: <?php echo ($this->helper('Velaro\Chat\helper\data')->getConfig('velaro/site/identifier')) ?>,
+    groupId: <?php echo ($this->helper('Velaro\Chat\helper\data')->getConfig('velaro/site/group')) ?>,
+  }
+</script>
+
+<script src="<?php echo ($this->helper('Velaro\Chat\helper\data')->getConfig('velaro/site/cdnurl')) ?>/scripts/launch.js"></script>
+
+<script>
+  Velaro('linkToEcommerceId', {
+    id: <?php echo ($this->helper('Velaro\Chat\helper\data')->getCustomerId()) ?>,
+    url: '<?php echo ($this->helper('Velaro\Chat\helper\data')->getCustomerUrl($this->helper('Magento\Backend\Helper\Data'))) ?>'
+  });
+</script>
+
+<?php if ($this->helper('Velaro\Chat\helper\data')->isCheckoutSuccessPage()) { ?>
+<script>
+  Velaro('recordEcommerceSale', 
+    id: <?php echo ($this->helper('Velaro\Chat\helper\data')->getOrderId()) ?>,
+    url: <?php echo ($this->helper('Velaro\Chat\helper\data')->getOrderUrl()) ?>
+  );
+</script>
+
+<?php } else { ?>
+<script>
+  Velaro('postEcommerceData',
+  {
+    cartTotal: <?php echo ($this->helper('Velaro\Chat\helper\data')->getCartTotal($this->helper('\Magento\Checkout\Helper\Cart'))) ?>,
+    cartItems: <?php echo ($this->helper('Velaro\Chat\helper\data')->getAllCartItems($this->helper('\Magento\Checkout\Helper\Cart'), $this->helper('\Magento\Catalog\Helper\Image'))) ?>,
+    recentlyViewed: <?php echo ($this->helper('Velaro\Chat\helper\data')->getMostRecentlyViewed($this->helper('\Magento\Catalog\Helper\Image'))) ?>
+  });
+</script>
+
+<?php } ?>
+
+

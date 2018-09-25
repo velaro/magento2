@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+     <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+        <default>
+            <velaro>
+                <site>
+                    <apimainurl>https://api-main-us-east.velaro.com/</apimainurl>
+                    <cdnurl>https://api-main-us-east.velaro.com/</cdnurl>
+                    <identifier>0</identifier>
+                    <group>0</group>
+                </site>
+            </velaro>
+        </default>
+    </config>
