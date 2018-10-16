@@ -24,7 +24,15 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
 
     public function getOrderId()
     {
-        return $this->_checkoutSession->getLastOrderId();
+        if(is_null($this->_checkoutSession)){
+            return 'null';
+        }
+        $orderId = $this->_checkoutSession->getLastOrderId();
+        if (is_null($orderId)) {
+            return 'null';
+        }
+
+        return $orderId;
     }
 
     public function getCustomerUrlBase($helper)
@@ -36,6 +44,9 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
 
     public function getOrderUrl($helper)
     {
+        if(is_null($this->_checkoutSession)){
+            return 'null';
+        }
         $orderId = $this->_checkoutSession->getLastOrderId();
         if (is_null($orderId)) {
             return 'null';
