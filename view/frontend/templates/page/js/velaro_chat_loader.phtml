@@ -71,7 +71,7 @@ if(VelaroDataHelper.getCustomerId()){
 <script>
   Velaro('recordEcommerceSale', 
     id: <?php echo ($this->helper('Velaro\Chat\helper\data')->getOrderId()) ?>,
-    url: '<?php echo ($this->helper('Velaro\Chat\helper\data')->getOrderUrl()) ?>'
+    url: '<?php echo ($this->helper('Velaro\Chat\helper\data')->getOrderUrl($this->helper('Magento\Backend\Helper\Data'))) ?>'
   );
 </script>
 <?php
