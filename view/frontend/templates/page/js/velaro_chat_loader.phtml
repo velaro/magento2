@@ -18,7 +18,7 @@
 
   getSubtotal: function(){
     if(this.data && this.data.cart && this.data.cart.subtotalAmount){
-      return this.data.cart.this.data.cart.subtotalAmount;
+      return this.data.cart.subtotalAmount;
     }
     return null;
   },
@@ -31,7 +31,7 @@
           price: cartItem.product_price_value,
           quantity: cartItem.qty,
           thumbnail: cartItem.product_image.src,
-          url: carItem.product_url
+          url: cartItem.product_url
         }
       })
     }
