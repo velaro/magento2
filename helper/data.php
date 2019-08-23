@@ -58,11 +58,6 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
         return $helper->getUrl($route, $params);
     }
 
-    public function isCheckoutSuccessPage()
-    {
-        return $this->_request->getFullActionName() == 'checkout_onepage_success';
-    }
-
     public function getConfig($config_path)
     {
         return $this->scopeConfig->getValue(

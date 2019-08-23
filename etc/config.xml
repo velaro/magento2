@@ -5,7 +5,7 @@
             <velaro>
                 <site>
                     <apimainurl>https://api-main-us-east.velaro.com/</apimainurl>
-                    <cdnurl>https://api-main-us-east.velaro.com/</cdnurl>
+                    <cdnurl>https://eastprodcdn.azureedge.net/</cdnurl>
                     <identifier>0</identifier>
                     <group>0</group>
                 </site>
